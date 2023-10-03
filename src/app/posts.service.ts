@@ -57,7 +57,8 @@ export class PostsService {
       .delete(
         'https://ng-complete-guide-3b51a-default-rtdb.europe-west1.firebasedatabase.app/posts.json',
         {
-          observe: 'events'
+          observe: 'events',
+          responseType: 'text'
         })
       .pipe(
           tap(event => {
